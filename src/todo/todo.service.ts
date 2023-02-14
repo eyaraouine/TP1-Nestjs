@@ -31,8 +31,9 @@ export class TodoService {
     }
   }
   deleteTodo(id: number): TodoEntity {
-    const todoToDelete = this.getTodoById(id);
-      this.todos.filter(todo => todo.id !== id);
+    const todoToDelete=this.getTodoById(id);
+    const todoIndex=this.todos.findIndex(todo=>todo.id==id);
+    this.todos.splice(todoIndex,1);
       return todoToDelete;
    }
     updateTodo(id:number, updateTodo:Partial<UpdateTodoDto>):TodoEntity{

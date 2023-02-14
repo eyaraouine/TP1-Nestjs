@@ -28,11 +28,14 @@ let TodoService = class TodoService {
         const todo = this.todos.find(todo => todo.id === id);
         if (todo)
             return todo;
-        throw new common_1.NotFoundException(`Le todo d'id ${id} n'existe pas`);
+        else {
+            throw new common_1.NotFoundException(`Le todo d'id ${id} n'existe pas`);
+        }
     }
     deleteTodo(id) {
         const todoToDelete = this.getTodoById(id);
-        this.todos.filter(todo => todo.id !== id);
+        const todoIndex = this.todos.findIndex(todo => todo.id == id);
+        this.todos.splice(todoIndex, 1);
         return todoToDelete;
     }
     updateTodo(id, updateTodo) {

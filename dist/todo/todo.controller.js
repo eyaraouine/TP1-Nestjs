@@ -44,7 +44,7 @@ __decorate([
     __metadata("design:returntype", Array)
 ], TodoController.prototype, "getTodos", null);
 __decorate([
-    (0, common_1.Post)('add'),
+    (0, common_1.Post)(),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [add_todo_dto_1.AddTodoDto]),
