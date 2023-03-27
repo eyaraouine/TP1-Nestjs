@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CommonModule = void 0;
 const common_1 = require("@nestjs/common");
 const uuid_1 = require("uuid");
-const provider = {
+const uuidProvider = {
     useValue: uuid_1.v4,
     provide: 'UUID',
 };
@@ -18,8 +18,8 @@ let CommonModule = class CommonModule {
 CommonModule = __decorate([
     (0, common_1.Global)(),
     (0, common_1.Module)({
-        providers: [provider],
-        exports: [provider]
+        providers: [uuidProvider],
+        exports: [uuidProvider]
     })
 ], CommonModule);
 exports.CommonModule = CommonModule;

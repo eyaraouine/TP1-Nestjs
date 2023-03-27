@@ -1,8 +1,8 @@
 import { TodoStatusEnum } from "../enums/todos_status.enum";
-export declare class TodoEntity {
+import { TimeStamp } from "../../dates/time-stamp";
+export declare class TodoEntity extends TimeStamp {
     id: number;
     name: string;
     description: string;
-    createdAt: Date;
     status: TodoStatusEnum;
 }
